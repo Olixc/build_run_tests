@@ -18,12 +18,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./my-app
 
       - name: Build project
         run: npm run build
-        working-directory: ./my-app
 
       - name: Start server
         run: npm start
-        working-directory: ./my-app
