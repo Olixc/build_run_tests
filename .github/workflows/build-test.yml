@@ -1,27 +1,29 @@
 name: build-test
-run-name: ${{ github.actor}} is building test actions
-on: [push]
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build-and-test-workflows:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
-          
-        - name: Setup Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 18
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-        - name: Install dependencies
-          run: npm install
-          working-directory: ./my-app
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-        - name: Build project
-          run: npm run build
-          working-directory: ./my-app
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./my-app
 
-        - name: Start server
-          run: npm start
-          working-directory: ./my-app
-            
+      - name: Build project
+        run: npm run build
+        working-directory: ./my-app
+
+      - name: Start server
+        run: npm start
+        working-directory: ./my-app
