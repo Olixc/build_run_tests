@@ -1,5 +1,5 @@
 name: build-test
-run-name: ${{ github_actor}} is building test actions
+run-name: ${{ github.actor}} is building test actions
 on: [push]
 jobs:
   build-and-test-workflows:
