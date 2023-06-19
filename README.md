@@ -1,4 +1,4 @@
-# Build and Test Workflow
+# Build and Test Workflows
 
 This repository includes a GitHub Actions workflow that automatically builds and runs tests for the project whenever changes are pushed to the repository. The workflow ensures that your code remains functional and passes all tests before merging or deploying.
 
